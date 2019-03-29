@@ -34,6 +34,18 @@
             <th>
                 @Html.DisplayNameFor(model => model.UserEstadoCivil)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.isProgramar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.isNetflix)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.isMusica)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.isDormir)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -60,6 +72,18 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.UserEstadoCivil)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.isProgramar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.isNetflix)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.isMusica)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.isDormir)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Cedula">Edit</a> |

@@ -29,11 +29,15 @@ namespace HtmlHelpersCore2.Models
         [Range(15,double.MaxValue,ErrorMessage = "Debe ser mayor de 15 años")]
         public int Edad { get; set; }
         [Phone]
-        public int Telefono { get; set; }
+        public string Telefono { get; set; }
         [EmailAddress]
         public string Email { get; set; }
         public Genero UserGenero { get; set; }
-        public EstadoCivil UserEstadoCivil { get; set; }
+        public string UserEstadoCivil { get; set; }
+        public bool isProgramar { get; set; }
+        public bool isNetflix { get; set; }
+        public bool isMusica { get; set; }
+        public bool isDormir { get; set; }
     }
 
     public enum Genero
@@ -42,11 +46,4 @@ namespace HtmlHelpersCore2.Models
         Femenino
     }
 
-    public enum EstadoCivil
-    {
-        Casado,
-        Soltero,
-        Viduo,
-        UnionLibre
-    }
 }

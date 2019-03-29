@@ -53,7 +53,7 @@ namespace HtmlHelpersCore2.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Cedula,Nombre,Apellido,Edad,Telefono,Email,UserGenero,UserEstadoCivil")] User user)
+        public async Task<IActionResult> Create([Bind("Cedula,Nombre,Apellido,Edad,Telefono,Email,UserGenero,UserEstadoCivil,isProgramar,isNetflix,isMusica,isDormir")] User user)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace HtmlHelpersCore2.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Cedula,Nombre,Apellido,Edad,Telefono,Email,UserGenero,UserEstadoCivil")] User user)
+        public async Task<IActionResult> Edit(int id, [Bind("Cedula,Nombre,Apellido,Edad,Telefono,Email,UserGenero,UserEstadoCivil,isProgramar,isNetflix,isMusica,isDormir")] User user)
         {
             if (id != user.Cedula)
             {
