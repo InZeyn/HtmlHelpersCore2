@@ -32,11 +32,17 @@ namespace HtmlHelpersCore2.Models
         public string Telefono { get; set; }
         [EmailAddress]
         public string Email { get; set; }
+        [Display(Name = "Genero")]
         public Genero UserGenero { get; set; }
+        [Display(Name = "Estado Civil")]
         public string UserEstadoCivil { get; set; }
+        [Display(Name = "Programar")]
         public bool isProgramar { get; set; }
+        [Display(Name = "Netflix")]
         public bool isNetflix { get; set; }
+        [Display(Name = "Musica")]
         public bool isMusica { get; set; }
+        [Display(Name = "Dormir")]
         public bool isDormir { get; set; }
     }
 

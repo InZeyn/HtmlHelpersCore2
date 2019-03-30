@@ -5,12 +5,18 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
+<h2>Detalles</h2>
 
 <div>
-    <h4>User</h4>
+   
     <hr />
     <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cedula)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cedula)
+        </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Nombre)
         </dt>
@@ -80,6 +86,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Cedula">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    @Html.ActionLink("Edit","Edit",new { id = Model.Cedula }) |
+    @Html.ActionLink("Regresar","Index")
 </div>

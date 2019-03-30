@@ -1,0 +1,85 @@
+﻿@model IEnumerable<HtmlHelpersCore2.Models.User>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cedula)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nombre)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Apellido)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Edad)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Telefono)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UserGenero)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UserEstadoCivil)
+                </th>
+                <th>
+                    Hobbies
+                </th>
+             
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cedula)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Apellido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Edad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telefono)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserGenero)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserEstadoCivil)
+                </td>
+                <td>
+                    @Html.DisplayNameFor(model => model.isProgramar)
+                    @Html.DisplayFor(modelItem => item.isProgramar)
+                    <br />
+                    @Html.DisplayNameFor(model => model.isNetflix)
+                    @Html.DisplayFor(modelItem => item.isNetflix)
+                    <br />
+                    @Html.DisplayNameFor(model => model.isMusica)
+                    @Html.DisplayFor(modelItem => item.isMusica)
+                    <br />
+                    @Html.DisplayNameFor(model => model.isDormir)
+                    @Html.DisplayFor(modelItem => item.isDormir)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id=item.Cedula }) |
+                    @Html.ActionLink("Detalles", "Details", new{ id=item.Cedula })  |
+                    @Html.ActionLink("Eliminar", "Delete", new{ id=item.Cedula })
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>

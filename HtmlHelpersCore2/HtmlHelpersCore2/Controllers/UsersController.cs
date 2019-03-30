@@ -41,19 +41,17 @@ namespace HtmlHelpersCore2.Controllers
 
             return View(user);
         }
-
+        
         // GET: Users/Create
-        public IActionResult Create()
+        public IActionResult _CreatePartial()
         {
             return View();
         }
 
         // POST: Users/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Cedula,Nombre,Apellido,Edad,Telefono,Email,UserGenero,UserEstadoCivil,isProgramar,isNetflix,isMusica,isDormir")] User user)
+        public async Task<IActionResult> _CreatePartial([Bind("Cedula,Nombre,Apellido,Edad,Telefono,Email,UserGenero,UserEstadoCivil,isProgramar,isNetflix,isMusica,isDormir")] User user)
         {
             if (ModelState.IsValid)
             {
@@ -81,8 +79,6 @@ namespace HtmlHelpersCore2.Controllers
         }
 
         // POST: Users/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Cedula,Nombre,Apellido,Edad,Telefono,Email,UserGenero,UserEstadoCivil,isProgramar,isNetflix,isMusica,isDormir")] User user)
